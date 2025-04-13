@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Build
 on:
   push:
     branches: [ main ]
@@ -28,4 +28,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: build-files
-        path: dist/ 
+        path: ./dist 
