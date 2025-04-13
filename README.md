@@ -1,6 +1,6 @@
-# Ad Generator
+# AdRocket - Next.js
 
-A modern React application that generates ad copy and banner previews using AI insights.
+A modern Next.js application that generates ad copy and banner previews using AI insights.
 
 ## Features
 
@@ -8,22 +8,22 @@ A modern React application that generates ad copy and banner previews using AI i
 - Form validation and error handling
 - Loading states and animations
 - Mock API integration (ready for real API implementation)
-- Code splitting and lazy loading for performance
+- Server-side rendering for better SEO
 - Error boundaries for resilient user experience
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js (v14+)
-- npm (v6+)
+- Node.js (v18+)
+- npm (v9+)
 
 ### Installation
 
 ```bash
 # Clone the repository
 git clone <repository-url>
-cd ad-generator
+cd adrocket
 
 # Install dependencies
 npm install
@@ -36,7 +36,7 @@ npm install
 npm run dev
 ```
 
-The application will be available at http://localhost:5173.
+The application will be available at http://localhost:3000.
 
 ### Production Build
 
@@ -44,8 +44,8 @@ The application will be available at http://localhost:5173.
 # Build for production
 npm run build
 
-# Preview the production build
-npm run preview
+# Start the production server
+npm start
 ```
 
 ## Project Structure
@@ -53,16 +53,15 @@ npm run preview
 ```
 ├── public/             # Static assets
 ├── src/
+│   ├── app/            # Next.js App Router pages
 │   ├── components/     # React components
-│   │   ├── AdGenerator.jsx     # Main component
-│   │   └── LazyBannerPreview.jsx  # Lazy-loaded component
-│   ├── index.css       # Global styles and Tailwind imports
-│   └── main.jsx        # Application entry point
-├── index.html          # HTML template
+│   │   ├── common/     # Shared components
+│   │   └── ...         # Feature-specific components
+│   └── utils/          # Utility functions
+├── .github/            # GitHub workflows
 ├── package.json        # Dependencies and scripts
-├── vite.config.js      # Vite configuration
-├── tailwind.config.js  # Tailwind CSS configuration
-└── postcss.config.js   # PostCSS configuration
+├── tsconfig.json       # TypeScript configuration
+└── next.config.mjs     # Next.js configuration
 ```
 
 ## Deployment to GitHub
@@ -96,10 +95,10 @@ git push -f origin main
 
 ## Technologies Used
 
-- React 18
+- Next.js 15
+- React 19
+- TypeScript
 - Tailwind CSS
-- Vite
-- ESLint
 
 ## License
 
