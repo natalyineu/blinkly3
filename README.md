@@ -65,13 +65,33 @@ npm run preview
 └── postcss.config.js   # PostCSS configuration
 ```
 
-## Deployment
+## Deployment to GitHub
 
-The project is set up for easy deployment to Netlify:
+### Deploying to Github Repository
+
+To deploy this project to the specified GitHub repository:
 
 ```bash
-# Deploy to Netlify
-npm run deploy:netlify
+# Initialize git if not already initialized
+git init
+
+# Add all files to git
+git add .
+
+# Commit your changes
+git commit -m "Initial commit"
+
+# Add the remote repository
+git remote add origin https://github.com/natalyineu/blinkly3.git
+
+# Push to GitHub
+git push -u origin main
+```
+
+If you need to force push (use with caution):
+
+```bash
+git push -f origin main
 ```
 
 ## Technologies Used
